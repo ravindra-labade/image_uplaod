@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>God Images</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+	</script>
+	<style>
+	.image-container{
+		display: flex;
+	}
+	.image-container img {
+		margin-right: 20px;
+	}
+	</style>
+</head>
+<body>
+	
+	{% for god in god_images %}
+			<div class="image-container col-md-4">
+					{{ god.name }}
+					<img src="{{ god.image.url }}" class="img-responsive" style="width: 100%; float: left; margin: auto; width:150px; padding:auto;" />
+			</div>
+	{% endfor %}
+
+</body>
+</html>
